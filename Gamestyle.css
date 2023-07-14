@@ -1,0 +1,97 @@
+* {
+    margin: 1px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: whitesmoke;
+    border-color: solid black;
+
+}
+
+.wrapper {
+    width: 65vmin;
+    height: 75vmin;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    border-radius: 5px;
+
+    overflow: hidden;
+    background: lightslategrey;
+    flex-direction: column;
+}
+
+.game-info {
+    background: #003366;
+    color: red;
+    font-size: 1.2rem;
+    font-weight: 100;
+    padding: 20px 15px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.play-board {
+    width: 100%;
+    height: 94%;
+    display: grid;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+    background: #21288337;
+}
+
+.play-board .food {
+    background: red;
+
+}
+
+.play-board .snakehead {
+    background: cyan;
+
+}
+
+.controls {
+    display: none;
+    justify-content: space-between;
+}
+
+.controls i {
+    background-color: black;
+    padding: 10px 0px;
+    color: aliceblue;
+    width: calc(91%/4);
+    cursor: pointer;
+    text-align: center;
+    font-size: -0.7rem;
+    border-right: 2px solid black;
+}
+
+@media screen and (max-width:800px) {
+    .wrapper {
+        width: 90vmin;
+        height: 115vmin;
+    }
+
+    .game-details {
+        font-size: 1rem;
+        padding: 15px 27px;
+
+    }
+
+    .controls {
+        display: flex;
+    }
+
+    .controls i {
+        padding: 15px 0;
+        font-size: 1rem;
+    }
+}
